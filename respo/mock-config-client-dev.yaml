@@ -1,0 +1,58 @@
+configuration:
+  mocks:
+    -
+      id: 1
+      name: test1
+      author: tengfei
+      request:
+        uri: /api/test/.*
+        method: GET|POST|PUT|DELETE
+        parameters:
+          -
+            name: name
+            value: test.*
+          -
+            name: age
+            value: 18
+        headers:
+          -
+            key: Content-Type
+            value: application/json
+      response:
+        delay: 1000
+        real: false
+        statusCode: 200
+        format: application/json;charset=UTF-8
+        headers:
+          -
+            key: Contrnt-Type
+            value: application/json
+        body: {滕飞test}
+    -
+      id: 1
+      name: test1
+      author: tengfei
+      request:
+        uri: /api/test/.*
+        method: GET|POST|PUT|DELETE
+        parameters:
+          -
+            name: name
+            value: test.*
+          -
+            name: age
+            value: 18
+        headers:
+          -
+            key: Content-Type
+            value: application/json
+      response:
+        delay: 1000
+        real: false
+        statusCode: 200
+        format: application/json;charset=UTF-8
+        customHeaders:
+          -
+            key: Contrnt-Type
+            value: application/json
+        body: {滕飞test}
