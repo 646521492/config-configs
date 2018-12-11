@@ -25,8 +25,8 @@ configuration:
         format: application/json;charset=UTF-8
         headers:
           -
-            key: Contrnt-Type
-            value: application/json
+            key: Authorization
+                        value: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3eFdwcmRIbkRWdjR3WHIyb01kdXZnTnpNU05QT1dPMCIsIm5hbWUiOiI3eFdwcmRIbkRWdjR3WHIyb01kdXZnTnpNU05QT1dPMCIsInNjb3BlIjpbIioiXSwiaWF0IjoxNTQ0NDEwNjA4LCJleHAiOjE1NDQ1MzA2MDh9.ubKJJpDUafruocCXPkeO5_0KX8JxNb90BBsuj7gZ7Og
         body: {滕飞test}
     -
       id: 2
@@ -51,7 +51,7 @@ configuration:
         real: false
         statusCode: 200
         format: application/json;charset=UTF-8
-        customHeaders:
+        headers:
           -
             key: Authorization
             value: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3eFdwcmRIbkRWdjR3WHIyb01kdXZnTnpNU05QT1dPMCIsIm5hbWUiOiI3eFdwcmRIbkRWdjR3WHIyb01kdXZnTnpNU05QT1dPMCIsInNjb3BlIjpbIioiXSwiaWF0IjoxNTQ0NDEwNjA4LCJleHAiOjE1NDQ1MzA2MDh9.ubKJJpDUafruocCXPkeO5_0KX8JxNb90BBsuj7gZ7Og
