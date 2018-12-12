@@ -6,7 +6,7 @@ configuration:
       author: tengfei
       request:
         uri: /api/test/.*
-        method: GET|POST|PUT|DELETE
+        method: GET
         parameters:
           -
             name: name
@@ -34,7 +34,7 @@ configuration:
       author: tengfei
       request:
         uri: /api/test/.*
-        method: GET|POST|PUT|DELETE
+        method: POST
         parameters:
           -
             name: name
