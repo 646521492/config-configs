@@ -7,13 +7,7 @@ configuration:
       request:
         uri: /api/test/.*
         method: GET
-        parameters:
-          -
-            name: name
-            value: test.*
-          -
-            name: age
-            value: 18
+        body: '{"account_id":"12848861","idcard_id":"6214835889636633","phone_id":"13757180340","device_id":"2af314be57ce43999987c5c6f5abcf65","credit_qq":"","credit_contact_1_phone":"","credit_contact_2_phone":""}'
         headers:
           -
             key: Content-Type
@@ -35,13 +29,7 @@ configuration:
       request:
         uri: /api/test/.*
         method: POST
-        parameters:
-          -
-            name: name
-            value: test.*
-          -
-            name: age
-            value: 18
+        body: '{"account_id":"12848861","idcard_id":"6214835889636633","phone_id":"13757180340","device_id":"2af314be57ce43999987c5c6f5abcf65","credit_qq":"","credit_contact_1_phone":"","credit_contact_2_phone":""}'
         headers:
           -
             key: Content-Type
@@ -63,19 +51,7 @@ configuration:
       request:
         uri: /risk/black/list
         method: POST
-        parameters:
-          - name: account_id
-            value: 1001
-          - name: idcard_id
-            value: 420583199409250054
-          - name: phone_id
-            value: 15869151614
-          - name: credit_qq
-            value:
-          - name: credit_contact_1_phone
-            value:
-          - name: credit_contact_2_phone
-            value:
+        body: '{"account_id":"12848861","idcard_id":"6214835889636633","phone_id":"13757180340","device_id":"2af314be57ce43999987c5c6f5abcf65","credit_qq":"","credit_contact_1_phone":"","credit_contact_2_phone":""}'
         headers:
           - key: Content-Type
             value: application/json
