@@ -1,0 +1,30 @@
+configuration:
+  mocks:
+    -
+      id: 1
+      name: test1
+      author: tengfei
+      request:
+        uri: /api/test/.*
+        method: GET
+        body: '{"account_id":"12848861","idcard_id":"6214835889636633","phone_id":"13757180340","device_id":"2af314be57ce43999987c5c6f5abcf65","credit_qq":"","credit_contact_1_phone":"","credit_contact_2_phone":""}'
+        headers:
+          -
+            header:
+              name: Content-Type
+              values: [application/json]
+        parameters:
+          -
+            parameter:
+              name: account_id
+              values: [12848861]
+      response:
+        delay: 1000
+        real: false
+        statusCode: 200
+        format: application/json;charset=UTF-8
+        headers:
+          -
+            key: Authorization
+            value: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3eFdwcmRIbkRWdjR3WHIyb01kdXZnTnpNU05QT1dPMCIsIm5hbWUiOiI3eFdwcmRIbkRWdjR3WHIyb01kdXZnTnpNU05QT1dPMCIsInNjb3BlIjpbIioiXSwiaWF0IjoxNTQ0NDEwNjA4LCJleHAiOjE1NDQ1MzA2MDh9.ubKJJpDUafruocCXPkeO5_0KX8JxNb90BBsuj7gZ7Og
+        body: '{"result":{"flag_specialList_c":"0","originResult":"{\"code\":\"100002\",\"swift_number\":\"3100437_20181113145954_3973\",\"flag_specialList_c\":\"0\"}"},"code":"200","resultDes":"请求成功","uuid":"20181113150349_3aaca377_bairong_risk_portrayal","sourceApi":{"callTime":1542092635783,"sourceName":"bairong","apiName":"bairong_risk_portrayal","apiDetailCode":null,"overTime":false},"trans_id":"string","event_type":"string","account_id":"string","channel_id":null,"order_id":null,"inputParam":"{\"idcard_id\":\"610481199001151811\",\"phone_id\":\"15323504440\",\"idcard_name\":\"张三\",\"uuid\":\"20181113150349_3aaca377_bairong_risk_portrayal\",\"trans_id\":\"string\",\"event_type\":\"string\",\"account_id\":\"string\"}"}'
