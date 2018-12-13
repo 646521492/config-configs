@@ -56,3 +56,35 @@ configuration:
             key: Authorization
             value: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3eFdwcmRIbkRWdjR3WHIyb01kdXZnTnpNU05QT1dPMCIsIm5hbWUiOiI3eFdwcmRIbkRWdjR3WHIyb01kdXZnTnpNU05QT1dPMCIsInNjb3BlIjpbIioiXSwiaWF0IjoxNTQ0NDEwNjA4LCJleHAiOjE1NDQ1MzA2MDh9.ubKJJpDUafruocCXPkeO5_0KX8JxNb90BBsuj7gZ7Og
         body: '{ 滕飞test }'
+    -
+      id: 3
+      name: 自有内部黑名单
+      author: tengfei
+      request:
+        uri: /risk/black/list
+        method: POST
+        parameters:
+          - name: account_id
+            value: 1001
+          - name: idcard_id
+            value: 420583199409250054
+          - name: phone_id
+            value: 15869151614
+          - name: credit_qq
+            value:
+          - name: credit_contact_1_phone
+            value:
+          - name: credit_contact_2_phone
+            value:
+        headers:
+          - key: Content-Type
+            value: application/json
+      response:
+        delay: 1000
+        real: false
+        statusCode: 200
+        format: application/json;charset=UTF-8
+#        headers:
+#          - key: Authorization
+#            value: JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI3eFdwcmRIbkRWdjR3WHIyb01kdXZnTnpNU05QT1dPMCIsIm5hbWUiOiI3eFdwcmRIbkRWdjR3WHIyb01kdXZnTnpNU05QT1dPMCIsInNjb3BlIjpbIioiXSwiaWF0IjoxNTQ0NDEwNjA4LCJleHAiOjE1NDQ1MzA2MDh9.ubKJJpDUafruocCXPkeO5_0KX8JxNb90BBsuj7gZ7Og
+        body: '{"data":{"qq":0,"uid":0,"phone":0,"idCard":0,"contact1":0,"device":0,"contact2":0},"code":200,"msg":"成功","success":false}'
